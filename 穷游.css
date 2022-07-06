@@ -1,0 +1,764 @@
+* {
+	margin: 0;
+	padding: 0;
+	/* 去掉高亮显示 */
+	-webkit-tap-highlight-color: transparent;
+	/* CSS3的盒子模型 */
+	box-sizing: border-box;
+	
+}
+
+body {
+	/* 百分比布局 */
+	width: 100%;
+	font-size: 14px;
+	background-color: #f5f5f5;	
+	font-family: "microsoft yahei",sans-serif;
+	min-width: 320px;
+	max-width:640px ;
+	margin: 0 auto;
+	height: 2000px;
+	box-sizing: border-box;
+}
+
+a {
+	color: #333;
+	text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+input {
+	border: none;
+	outline: none;
+	background-color: rgba(0,0,0,.05);
+}
+
+/* 清除浮动 */
+.clearfix::before, 
+.clearfix::after {
+    content: '';
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+}
+
+header {
+	width: 100%;
+	position: relative;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	min-width: 320px;
+	max-width: 640px;
+	background-color: white;
+	height: 38px;
+}
+
+header >.compo-search-bar {
+	width: 100%;
+	min-width: 320px;
+	max-width: 640px;
+	height: 44%;
+	padding: 5px;
+	position: relative;  
+}
+
+header>.compo-search-bar>.logo {
+ 	position: absolute;
+	top: 5px;
+	left: 15px;
+	width: 72px;
+	height: 30px;
+	background: url(images/logo%20.png) no-repeat;
+	background-size: 60px 29px;
+}
+
+header > .compo-search-bar > form {
+	height: 44px;
+	margin-left:80px;
+	margin-right: 8px;
+}
+
+header >.compo-search-bar > form >input {
+	width: 100%;
+	height: 25px;
+	margin-top: 3px;
+	border-radius: 15px;
+	padding-left: 30px;
+}
+
+header > .compo-search-bar > form >.search-icon {
+	position: absolute;
+	top: 15px;
+	left: 95px;
+	width: 48px;
+	height: 48px;
+	background: url(images/搜索.png) no-repeat;
+	background-size: 13px 13px;
+}
+
+.rank{
+	height: 580px;
+	width: 100%;
+}
+
+.rank >.m-title {
+	margin-top: 10px;
+	padding: 15px;
+	font-size: 25px;
+	color: #000000;
+	position: relative;
+}
+
+.m-title .l-tit {
+    font-weight: 800;
+}
+
+.rank>.rank-wrapper {
+	padding: 0px 10px;
+}
+
+.rank>.rank-wrapper>.type-tabs{
+	display: flex;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+	padding: 5px;
+}
+
+.rank>.rank-wrapper>.type-tabs>.tab.current{
+	background:#11BF79;
+	color: #FFFFFF;
+	border: 1px solid #11BF79 ;
+}
+
+.rank>.rank-wrapper>.type-tabs>.tab {
+	display: inline-flex;
+	-webkit-box-align: center;
+	justify-content: center;
+	box-sizing: border-box;
+	width: 22.5%;
+	height:22px ;
+	border-radius: 20px;
+	border: 1px solid  rgba(0,0,0,.05); 
+	font-weight: 700;
+	color: #000;
+	background: #FFFFFF;
+	align-items: center;
+	-webkit-box-pack: center;
+}
+
+.rank>.rank-wrapper>.rank-container {
+	font-size: 15px;
+}
+
+.rank>.rank-wrapper>.rank-container>.rank-item>.cell {
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+	height: 50px;
+	font-weight: 700;
+	color: rgba(0,0,0,.8);
+	text-decoration: none;
+ }
+
+.rank>.rank-wrapper>.rank-container>.rank-item>.cell>.ranks {
+	width: 10%;
+	flex: 1;
+ }
+ 
+.rank>.rank-wrapper>.rank-container>.rank-item>.cell>.name{
+	flex: 6;
+ }
+ 
+.rank>.rank-wrapper>.rank-container>.rank-item>.cell>.beento{
+	margin-left: auto;
+	color: rgba(0,0,0,.5);
+ }
+
+.compo-hot-month{
+	height: 308px;
+	width: 100%;
+ }
+
+.compo-hot-month>.title{
+	margin-top: 10px;
+	padding: 0 8px;
+	font-size: 20px;
+	font-weight: 800;
+	color: #000000;
+	position: relative;
+ }
+
+.compo-hot-month>.title>.s-tit {
+	font-size: 15px;
+	color: #11BF79;
+	position: absolute;
+	right: 10px;
+	top: 2px;
+	text-decoration: none;
+ }
+ 
+.compo-hot-month>.title>.s-tit::before {
+		content: "";
+		display: inline-block;
+	    width: 10px;
+	    height: 10px;
+		background: url(images/!.png) no-repeat;
+		position:absolute;
+		background-size: 10px 10px;
+		right: 90px;
+		top: 8px;
+}
+
+.compo-hot-month>.compo-slide-tab {
+		margin-top: 13px;
+}
+
+.assist {
+		overflow: hidden;
+	    height: 62px;
+}
+
+.assist>.wrap {
+	overflow-x: scroll;
+	overflow-y: hidden;
+	padding: 0 15px 30px;
+	white-space: nowrap;
+
+}
+
+.compo-slide-tab>.wrap>.item {
+	display: inline-block;
+	background-color: #FFFFFF;
+	border:1px solid #dedede;
+	font-size: 13px;
+	color: #000000;
+	height:32px;
+	line-height: 32px;
+	text-align: center;
+	border-radius: 7px;
+	box-sizing: border-box;
+	 overflow: hidden; 
+	 white-space: nowrap; 
+	 text-overflow: ellipsis;
+	 padding: 0 5px; 
+}
+
+.compo-slide-tab>.wrap>.item.active {
+	background-color: #11BF79;
+	border-color: #11BF79;
+	color: #FFFFFF;
+}
+
+.assist>.compo-slide-content {
+    overflow: hidden;
+ }
+ 
+.compo-slide-content >.wrap {
+	  overflow-x: scroll;
+	  overflow-y: hidden;
+	  padding-bottom: 30px;
+	  white-space: nowrap;
+ }
+ 
+.assist>.wrap>a:nth-child(1) {
+	    display: inline-block;
+	    box-shadow: 0 10px 20px 0 rgb(0 0 0 / 15%);
+	    margin-right: 9px;
+	    text-decoration: none;
+	    color: #fff;
+	    position: relative;
+	    border: none;
+		background: url(images/新西兰.jpg) no-repeat;
+		width: 165px;
+		height: 165px;
+		background-size: 165px auto;
+}
+
+.assist>.wrap>a:nth-child(2){
+		display: inline-block;
+		box-shadow: 0 10px 20px 0 rgb(0 0 0 / 15%);
+		margin-right: 9px;
+		text-decoration: none;
+		color: #fff;
+		position: relative;
+		border: none;
+		background: url(images/韩国江原道.jpg) no-repeat;
+		width: 165px;
+		height: 165px;
+		background-size: 165px auto;
+}
+
+.assist>.wrap>a:nth-child(3){
+		display: inline-block;
+		box-shadow: 0 10px 20px 0 rgb(0 0 0 / 15%);
+		margin-right: 9px;
+		text-decoration: none;
+		color: #fff;
+		position: relative;
+		border: none;
+		background: url(images/美国夏威夷.jpg) no-repeat;
+		width: 165px;
+		height: 165px;
+		background-size: 165px auto;
+}
+
+.assist>.wrap>a:nth-child(4){
+		display: inline-block;
+		box-shadow: 0 10px 20px 0 rgb(0 0 0 / 15%);
+		margin-right: 9px;
+		text-decoration: none;
+		color: #fff;
+		position: relative;
+		border: none;
+		background: url(images/泰国苏梅岛.jpg) no-repeat;
+		width: 165px;
+		height: 165px;
+		background-size: 165px auto;
+}
+
+.assist>.wrap>a:last-child{
+		display: inline-block;
+		box-shadow: 0 10px 20px 0 rgb(0 0 0 / 15%);
+		margin-right: 9px;
+		text-decoration: none;
+		color: #fff;
+		position: relative;
+		border: none;
+		background: url(images/俄罗斯贝加尔湖.jpg) no-repeat;
+		width: 165px;
+		height: 165px;
+		background-size: 165px auto;
+}
+	
+.assist.compo-slide-content .wrap .item {
+		 display: inline-block;
+		 box-shadow: 0 10px 20px 0 rgb(0 0 0 / 15%);
+		 margin-right: 9px;
+		 text-decoration: none;
+		 color: #fff;
+		 position: relative;
+		 border: none;				
+ }
+		
+.compo-hot-month .assist .item .cn-name {
+	      position: absolute;
+		  bottom: 15px;
+		  left: 15px;
+		  width: 135px;
+		  text-align: left;
+		  font-size:20px;
+		  overflow: hidden;
+		  white-space: nowrap;
+		  text-overflow: ellipsis;
+}
+
+.look-all-country {
+		 display: block;
+		 ackground-color: #fff;
+		 eight: 40px;
+		 ont-size: 13px;
+		 olor: #000;
+		 ext-decoration: none;
+		 ext-align: left;
+		 height:40px;
+		 position: relative; 
+	     padding: 0 10px;
+		 margin: 8px 15px 0;
+		 border-radius: 5px;
+		 box-shadow: 0 6px 20px 0 rgb(0 0 0 / 5%);
+}
+
+.look-all-country> .icon-all {
+		 display: inline-block;
+		 width: 20px;
+		 height: 20px;
+		 vertical-align: 1px;
+		 margin-right: 13px;
+}
+
+.look-all-country>.icon-arrow {
+		display: inline-block;
+		height:16px;
+		width: 8px;
+		position: absolute;
+		right: 12px;
+		top: 13px;
+}
+
+.compo-visa-free .title {
+		margin-top: 20px;
+}
+			
+.m-title .l-tit {
+		 font-weight: 700;
+}
+
+.m-title .s-tit {
+		font-size: 15px;
+		color: #11bf79;
+		position: absolute;
+		right: 10px;
+		top: 2px;
+		text-decoration:none;
+}
+
+.m-title>.s-tit::before {
+		content: "";
+		display: inline-block;
+		width: 10px;
+		height: 10px;
+		background: url(images/!.png) no-repeat;
+		position:absolute;
+		background-size: 10px 10px;
+		right: 90px;
+		top: 8px;			
+}
+	
+.compo-visa-free .slide-content {
+	    margin-top:20px;
+}
+						
+.compo-visa-free>.assist>.wrap>a:nth-child(1) {
+	    display: inline-block;
+	    box-shadow: 0 10px 20px 0 rgb(0 0 0 / 15%);
+	    margin-right: 9px;
+	    text-decoration: none;
+	    color: #fff;
+	    position: relative;
+	    border: none;
+		background: url(images/济州岛.jpg) no-repeat;
+		width: 165px;
+		height: 165px;
+		background-size: 165px auto;
+}
+
+.compo-visa-free>.assist>.wrap>a:nth-child(2){
+	    display: inline-block;
+	    box-shadow: 0 10px 20px 0 rgb(0 0 0 / 15%);
+	    margin-right: 9px;
+	    text-decoration: none;
+	    color: #fff;
+	    position: relative;
+	    border: none;
+	    background: url(images/印度尼西亚.jpg) no-repeat;
+	    width: 165px;
+	    height: 165px;
+	    background-size: 165px auto;
+}
+
+.compo-visa-free>.assist>.wrap>a:nth-child(3){
+		display: inline-block;
+		box-shadow: 0 10px 20px 0 rgb(0 0 0 / 15%);
+		margin-right: 9px;
+		text-decoration: none;
+		color: #fff;
+		position: relative;
+		border: none;
+		background: url(images/泰国.jpg) no-repeat;
+		width: 165px;
+		height: 165px;
+		background-size: 165px auto;
+}
+
+.compo-visa-free>.assist>.wrap>a:nth-child(4){
+		display: inline-block;
+		box-shadow: 0 10px 20px 0 rgb(0 0 0 / 15%);
+		margin-right: 9px;
+		text-decoration: none;
+		color: #fff;
+		position: relative;
+		border: none;
+		background: url(images/塞班岛.jpg) no-repeat;
+		width: 165px;
+		height: 165px;
+		background-size: 165px auto;
+}
+
+.compo-visa-free>.assist>.wrap>a:nth-child(5){
+		display: inline-block;
+		box-shadow: 0 10px 20px 0 rgb(0 0 0 / 15%);
+		margin-right: 9px;
+		text-decoration: none;
+		color: #fff;
+		position: relative;
+		border: none;
+		background: url(images/柬埔寨.jpg) no-repeat;
+		width: 165px;
+		height: 165px;
+		background-size: 165px auto;
+}
+
+.compo-visa-free>.assist>.wrap>a:nth-child(6){
+		display: inline-block;
+		box-shadow: 0 10px 20px 0 rgb(0 0 0 / 15%);
+		margin-right: 9px;
+		text-decoration: none;
+		color: #fff;
+		position: relative;
+		border: none;
+		background: url(images/乌克兰.jpg) no-repeat;
+		width: 165px;
+		height: 165px;
+		background-size: 165px auto;
+}
+
+.compo-visa-free>.assist>.wrap>a:last-child{
+		display: inline-block;
+		box-shadow: 0 10px 20px 0 rgb(0 0 0 / 15%);
+		margin-right: 9px;
+		text-decoration: none;
+		color: #fff;
+		position: relative;
+		border: none;
+		background: url(images/太平山.jpg) no-repeat;
+		width: 165px;
+		height: 165px;
+		background-size: 165px auto;
+}
+
+.compo-visa-free .slide-content .cn-name {
+		font-size: 18px;
+		display: block;
+		width: 100%;
+		line-height: 150px;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+}
+
+.compo-island>.title {
+		 margin-top: 20px;
+}
+
+.m-title {
+		 padding: 0 15px;
+		 font-size: 20px;
+		 color: #000;
+		 position: relative;
+		 font-weight: 800;
+}
+
+.m-title .s-tit {
+		 font-size: 15px;
+		 color: #11bf79;
+		 position: absolute;
+		 right: 10px;
+		 top: 2px;
+		 text-decoration:none;
+}
+
+.compo-island>.m-title>.s-tit::before {
+		 content: "";
+		 display: inline-block;
+		 width: 20px;
+		 height: 20px;
+		 background: url(images/!.png) no-repeat;
+		 position:absolute;
+		 background-size: 10px 10px;
+		 right: 95px;
+		 top: 8px;			
+}
+
+.compo-island>.slide-content {
+		margin-top:20px;
+}
+						
+.compo-island>.assist>.wrap>a:nth-child(1) {
+	    display: inline-block;
+	    box-shadow: 0 10px 20px 0 rgb(0 0 0 / 15%);
+	    margin-right: 9px;
+	    text-decoration: none;
+	    color: #fff;
+	    position: relative;
+	    border: none;
+		background: url(images/普吉岛.jpg) no-repeat;
+		width: 165px;
+		height: 165px;
+		background-size: 165px auto;
+}
+
+.compo-island>.assist>.wrap>a:nth-child(2){
+	   display: inline-block;
+	   box-shadow: 0 10px 20px 0 rgb(0 0 0 / 15%);
+	   margin-right: 9px;
+	   text-decoration: none;
+	   color: #fff;
+	   position: relative;
+	   border: none;
+	   background: url(images/巴厘岛2.jpg) no-repeat;
+	   width: 165px;
+	   height: 165px;
+	   background-size: 165px auto;
+}
+
+.compo-island>.assist>.wrap>a:nth-child(3){
+		display: inline-block;
+		box-shadow: 0 10px 20px 0 rgb(0 0 0 / 15%);
+		margin-right: 9px;
+		text-decoration: none;
+		color: #fff;
+		position: relative;
+		border: none;
+		background: url(images/长滩岛.jpg) no-repeat;
+		width: 165px;
+		height: 165px;
+		background-size: 165px auto;
+}
+
+.compo-island.assist>.wrap>a:nth-child(4){
+		display: inline-block;
+		box-shadow: 0 10px 20px 0 rgb(0 0 0 / 15%);
+		margin-right: 9px;
+		text-decoration: none;
+		color: #fff;
+		position: relative;
+		border: none;
+		background: url(images/马尔代夫.jpg) no-repeat;
+		width: 165px;
+		height: 165px;
+		background-size: 165px auto;
+}
+
+.compo-island>.assist>.wrap>a:nth-child(5){
+		display: inline-block;
+		box-shadow: 0 10px 20px 0 rgb(0 0 0 / 15%);
+		margin-right: 9px;
+		text-decoration: none;
+		color: #fff;
+		position: relative;
+		border: none;
+		background: url(images/沙巴.jpg) no-repeat;
+		width: 165px;
+		height: 165px;
+		background-size: 165px auto;
+}
+
+.compo-island>.assist>.wrap>a:nth-child(6){
+		display: inline-block;
+		box-shadow: 0 10px 20px 0 rgb(0 0 0 / 15%);
+		margin-right: 9px;
+		text-decoration: none;
+		color: #fff;
+		position: relative;
+		border: none;
+		background: url(images/甲米.jpg) no-repeat;
+		width: 165px;
+		height: 165px;
+		background-size: 165px auto;
+}
+
+.compo-island>.assist>.wrap>a:last-child{
+		display: inline-block;
+		box-shadow: 0 10px 20px 0 rgb(0 0 0 / 15%);
+		margin-right: 9px;
+		text-decoration: none;
+		color: #fff;
+		position: relative;
+		border: none;
+		background: url(images/冲绳.jpg) no-repeat;
+		width: 165px;
+		height: 165px;
+		background-size: 165px auto;
+}
+
+.compo-island>.slide-content {
+	    margin-top:20px;
+}
+
+.compo-island .slide-content .cn-name {
+	   font-size: 18px;
+	   display: block;
+	   width: 100%;
+       text-align: center;
+       line-height: 180px;
+ }
+ 
+.theme-rec-wrap .m-title{
+	   margin-top: 50px;
+ }
+ 
+.theme-rec-wrap .com-slide-tab{
+	   margin-top: 20px;
+ }
+ 
+.theme-rec-wrap .assist .wrap {
+	 overflow-x: scroll;
+	 overflow-y: hidden;
+	 padding: 0 15px 30px;
+	 white-space: nowrap;
+ }
+ 
+.assist{
+	overflow: hidden;
+	height: 52px;
+}
+
+.assist .wrap .item.active {
+    background-color: #11bf79;
+    border-color: #11bf79;
+    color: #fff;
+}
+
+.assist .wrap .item {
+    display: inline-block;
+    background-color: #fff;
+    border: 1px solid #dedede;
+    font-size: 13px;
+    color: #000;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    border-radius: 4px;
+    margin-right: 12px;
+    box-sizing: border-box;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 0 5px;
+}
+
+.bottom-box-content {
+		width: 100%;
+	    overflow: hidden;
+	    padding: 0 5px ;
+}
+
+ul , ol {
+    list-style: none;
+}
+
+.bottom-box-content>ul {
+	width: 100%;
+	padding: 2px;
+}
+
+.bottom-box-content>ul>li {
+	width: 33.33%;
+	float: left;
+	text-align: center;
+	text-overflow: ellipsis;
+	padding:5px 5px;
+	line-height: 45px
+}
+
+.bottom-box-content>ul>li>span{
+	font-size: 15px;
+	font-weight: 540;
+}
+
+.bottom-box-content>ul>li:nth-child(n+2)>a {
+	display: block;
+	width: 100%;
+ } 
+ 
+.bottom-box-content>ul>li>a >img {
+	width: 100%;
+	float: left;
+	border-radius: 5px;
+	box-shadow: 0 10px 20px 0 rgb(0 0 0 / 15%);
+}
